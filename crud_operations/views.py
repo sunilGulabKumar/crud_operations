@@ -19,4 +19,5 @@ def addview(request):
     serializers=HotelBookSerializers(data=request.data)
     if serializers.is_valid():
         serializers.save()
+        print("dajslfkj")
     return Response(serializers.data)
