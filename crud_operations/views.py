@@ -1,7 +1,6 @@
 # from django.shortcuts import Response
 # from django.shortcuts import 
 from rest_framework.response import Response
-# from .views import views
 from rest_framework.decorators import api_view
 from crud_operations.serializers import HotelBookSerializers
 from crud_operations.models import HotelBook
@@ -19,5 +18,4 @@ def addview(request):
     serializers=HotelBookSerializers(data=request.data)
     if serializers.is_valid():
         serializers.save()
-        print("dajslfkj")
     return Response(serializers.data)
